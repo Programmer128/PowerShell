@@ -213,7 +213,7 @@ ForEach ($Folder in $FolderPath)
         }
         Else
         {                
-            #Write system account's permission info to the report file.
+            #Write account's permission info to the report file if it is not a system account.
             Write-UserToFile -FileRightsObject $F -NameWithoutDomain $DomainNameFinal -ReportFile $ReportFile -IsSystemAccount $true
         }   
     }
